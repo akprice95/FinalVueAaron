@@ -1,25 +1,30 @@
+
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
 <v-app>
-  <v-navigation-drawer app>Nav</v-navigation-drawer>
-  <v-toolbar app>Toolbar</v-toolbar>
+  <v-navigation-drawer app clipped v-model="drawer">Nav</v-navigation-drawer>
+  <v-toolbar app clipped-left> <v-toolbar-side-icon @click.stop="drawer=!drawer"></v-toolbar-side-icon>
+  </v-toolbar>
   <v-content>
     <v-container fluid>
-      <router-view></router-view>
+      <router-view>Router-View</router-view>
     </v-container>
   </v-content>
   <v-footer app>Footer</v-footer>
 </v-app>
-
+</template>
 
 <script>
-export default {
-  
-}
+ export default {
+    data () {
+      return {
+        drawer: null,
+        items: [
+          { title: 'Home', icon: 'dashboard' },
+          { title: 'About', icon: 'question_answer' }
+        ]
+      }
+    }
+  }
 </script>
-
-<stylescoped>
-
+<style scoped>
 </style>
