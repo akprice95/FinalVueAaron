@@ -8,12 +8,18 @@
                            label="Email"
                            Placeholder="foo@bar.com">
                         </v-text-field>
-                        <v-text-field>
-
+                        <v-text-field
+                            label="Password"
+                            v-model="Password"
+                            :type="show1 ? 'text' : 'password'">
                         </v-text-field>
                     </v-form> 
                 </v-card>  
             </v-flex>
+            <div>
+                <p>{{ email }}</p>
+                <p>{{ password }}</p>
+            </div>
         </v-layout>
     </v-container>
 
@@ -21,7 +27,9 @@
 
 <script>
 export default {
-    
+    show1: false,
+    password: 'password',
+    email: 'email'
 }
 </script>
 
