@@ -28,3 +28,14 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount("#app");
+
+new Vue({
+  el: '#app',
+  data: () => ({
+    drawer: true
+  }),
+
+  props: {
+    source: String
+  }
+})
