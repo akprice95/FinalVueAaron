@@ -6,7 +6,7 @@
   </v-toolbar>
   <v-content>
     <v-container fluid>
-      <div>Content goes here</div>
+      <div v-box-shadow>Content goes here</div>
       <router-view>Router-View</router-view>
     </v-container>
   </v-content>
