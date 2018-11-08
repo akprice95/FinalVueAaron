@@ -12,7 +12,7 @@
           <v-list-tile-action>
           </v-list-tile-action>
           <v-list-tile-content>
-              <router-link to="/">Home</router-link> 
+              <router-link to="/">Home</router-link>
           </v-list-tile-content>
         </v-list-tile>
         <v-list-tile>
@@ -26,7 +26,7 @@
           <v-list-tile-action>
           </v-list-tile-action>
           <v-list-tile-content>
-            <router-link to="/Login">Login</router-link> 
+            <router-link to="/Login">Login</router-link>
           </v-list-tile-content>
         </v-list-tile>
           <v-list-tile>
@@ -94,7 +94,7 @@
     props: {
       source: String
     }
-  
+
   }
 </script>
 
@@ -107,10 +107,10 @@
   text-align: center;
   color: #1b5186;
   margin-top: 60px;
-  
+
 }
 #nav {
- color: red;
+ color: blue;
 }
 
 .daFooter{
