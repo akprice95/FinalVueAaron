@@ -1,5 +1,6 @@
 import Vue from "vue";
-import './Plugins/vuetify'
+import Vuetify from 'vuetify';
+import './Plugins/vuetify';
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
@@ -21,6 +22,14 @@ Vue.directive('box-shadow', {
 })
 
 
+import 'material-design-icons-iconfont/dist/material-design-icons.css';// Ensure you are using css-loader
+
+
+Vue.use(Vuetify, {
+ iconfont: 'mdi'
+})
+
+
 Vue.config.productionTip = false;
 
 new Vue({
@@ -39,3 +48,5 @@ new Vue({
     source: String
   }
 })
+
+Vue.use(Vuetify)
