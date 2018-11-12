@@ -5,7 +5,6 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import Vuelidate from 'vuelidate';
-import Vuetify from "vuetify";
 import '@mdi/font/css/materialdesignicons.css';
 
 Vue.use(Vuetify, {
