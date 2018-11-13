@@ -3,6 +3,7 @@ import Router from "vue-router";
 import Home from "./Views/Home.vue";
 import Layout from "./Views/Layout.vue";
 import Login from './Views/Login.vue';
+import Stats from './components/ChildViews/Stats'
 
 Vue.use(Router);
 
@@ -11,8 +12,15 @@ export default new Router({
     {
       path: "/",
       name: "home",
-      component: Home
+      component: Home,
+      children:[ {
+  path:"/stats",
+  component: Stats,
+  name: "stats"
+      } ]
     },
+
+    
     {
     path: "/layout",
     name: "layout",

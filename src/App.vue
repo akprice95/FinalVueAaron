@@ -20,7 +20,7 @@
           <v-list-tile-action>
           </v-list-tile-action>
           <v-list-tile-content>
-             <router-link to="/about">Transactions</router-link>
+             <router-link to="/about">MyStats</router-link>
           </v-list-tile-content>
         </v-list-tile>
           <v-list-tile >
@@ -47,23 +47,12 @@
     
     <v-toolbar app fixed clipped-left>
       <v-toolbar-side-icon  @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title>MoneyHUNGRY</v-toolbar-title>
+      <v-toolbar-title>Fortnite stats</v-toolbar-title>
     </v-toolbar>
      <v-content>
-      <router-view/>
-    
-   
-      
-
-      
-      <v-container fluid fill-height>
-        <v-layout justify-center align-center>
-          <v-flex shrink>
-            <v-tooltip right>
-             
-            </v-tooltip>
-          </v-flex>
-        </v-layout>
+      <v-container fluid>
+        <router-view></router-view> 
+        <router-view name="stats"></router-view>
       </v-container>
     </v-content>
     <v-footer id="daFooter" app >

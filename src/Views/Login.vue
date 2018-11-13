@@ -1,5 +1,4 @@
 <template>
-    <v-container >
         <v-layout justify-center>
             <v-flex xs6>
                 <v-card>
@@ -32,7 +31,6 @@
                 
             </div>
         </v-layout>
-    </v-container>
 </template>
 
 <script>

@@ -6,6 +6,9 @@ import router from "./router";
 import store from "./store";
 import Vuelidate from 'vuelidate';
 import '@mdi/font/css/materialdesignicons.css';
+import VueResouce from 'vue-resource';
+
+Vue.use(VueResouce);
 
 Vue.use(Vuetify, {
  iconfont: 'mdi' // 'md' || 'mdi' || 'fa' || 'fa4'
