@@ -25,7 +25,7 @@
       ></v-text-field>
 
       <v-btn icon>
-        <v-icon>Search</v-icon>
+        <v-icon></v-icon>
       </v-btn>
 
       <v-btn icon>
