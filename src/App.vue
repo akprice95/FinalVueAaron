@@ -94,7 +94,7 @@
 
 }
 #nav {
- color: blue;
+ color: red;
 }
 
 .daFooter{
