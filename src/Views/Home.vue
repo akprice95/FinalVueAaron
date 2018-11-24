@@ -2,41 +2,24 @@
 
   <v-container id="dropdown-example" grid-list-xl>
     <v-layout row wrap>
-
-      
-     
-
-
- 
     <v-toolbar>
        <v-flex xs12 sm3>
-         <v-overflow-btn
+         <v-select
+         v-model="Platform"
           :items="dropdown_font"
           label="Platform"
-          target="#dropdown-example"
-        ></v-overflow-btn>
+        ></v-select>
        </v-flex>
-
       <v-text-field
+      v-model.trim="Username"
       label="Username"
-      hide-details
-        
         single-line
       ></v-text-field>
-
-      <v-btn icon>
-        <v-icon></v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>more_vert</v-icon>
-      </v-btn>
+  <button @click="fetchData">Get Data</button>
     </v-toolbar>
-  
    </v-layout>
         </v-container>
 </template>
-
 <script>
 
 
@@ -47,7 +30,10 @@ export default {
   name: "home",
   
     data: () => ({
-      dropdown_font: ['Xbox', 'Playstation', 'PC'],
+      Username: "",
+      Platform: null,
+      Key: "7152cd0a-ff37-4945-b2ac-ea8d1c4f3fe2",
+      dropdown_font: ['xbox', 'Playstation', 'PC'],
       dropdown_icon: [
         { text: 'list', callback: () => console.log('list') },
         { text: 'favorite', callback: () => console.log('favorite') },
@@ -60,6 +46,21 @@ export default {
         { text: '25%' },
         { text: '0%' }
       ]
-    })
+    }),
+methods:{
+    fetchData() {
+  this.$http.get('http://api.fortnitetracker.com/v1/profile/'+ this.Platform +'/'+ this.Username,
+ { headers:{
+    Authorization: "Basic 7152cd0a-ff37-4945-b2ac-ea8d1c4f3fe2"
   }
+ }
+  )
+  .then(response => {
+        return response.json();
+       })
+       .then(data => console.log(data));
+}
+  }
+}
+
 </script>
