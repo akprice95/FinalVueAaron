@@ -49,19 +49,17 @@ export default {
       ]
     }),
 methods:{
-    fetchData() {
-  this.$https.get('https://api.fortnitetracker.com/v1/profile/{'+ this.Platform +'}/{'+ this.Username +'}',
- { headers:{
-    Authorization: "Basic 7152cd0a-ff37-4945-b2ac-ea8d1c4f3fe2"
-  }
- }
-  )
-  .then(response => {
-    this.info = response;
-        return response.json();
-       })
-}
+   fetchData() {
+      fetch(
+          'https://api.fortnitetracker.com/v1/profile/xbox/Xxakprice95xX'
+        )
+        .then(response => {
+          return response.json();
+        })
+        .then(data => console.log(data));
+    }
   }
 }
+  
 
 </script>
