@@ -53,7 +53,7 @@ methods:{
   this.$http.get('http://api.fortnitetracker.com/v1/profile/{'+ this.Platform +'}/{'+ this.Username +'}',
  { headers:{
    
-    Authorization: "Basic 7152cd0a-ff37-4945-b2ac-ea8d1c4f3fe2"
+    Authorization: "TRN-Api-Key 7152cd0a-ff37-4945-b2ac-ea8d1c4f3fe2"
   }
  }
   )
