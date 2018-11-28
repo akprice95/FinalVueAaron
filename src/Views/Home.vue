@@ -51,8 +51,12 @@ export default {
 methods:{
    fetchData() {
       fetch(
-          'https://api.fortnitetracker.com/v1/profile/xbox/Xxakprice95xX'
-        )
+          'https://api.fortnitetracker.com/v1/profile/xbox/Xxakprice95xX',
+       
+       { headers:{
+   
+    Authorization: "Basic 7152cd0a-ff37-4945-b2ac-ea8d1c4f3fe2"
+  }})
         .then(response => {
           return response.json();
         })
