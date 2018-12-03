@@ -3,7 +3,7 @@
     <v-layout row wrap>
       <v-toolbar>
         <v-flex xs12 sm3>
-          <v-select v-model="Platform" :items="dropdown_font" label="Platform"></v-select>
+          <v-select v-model="Platform" :items="items" label="Platform"></v-select>
         </v-flex>
         <v-text-field v-model.trim="Username" label="Username" single-line></v-text-field>
         <button @click="fetchData">Get Data</button>
@@ -20,9 +20,9 @@ export default {
     data: () => ({
       info : null,
       Username: "",
-      Platform: null,
+      Platform: "",
       Key: "7152cd0a-ff37-4945-b2ac-ea8d1c4f3fe2",
-      dropdown_font: ['xbox', 'Playstation', 'PC'],
+      items: ['xbox', 'Playstation', 'PC'],
       dropdown_icon: [
         { text: 'list', callback: () => console.log('list') },
         { text: 'favorite', callback: () => console.log('favorite') },
@@ -38,7 +38,8 @@ export default {
     }),
 methods:{
     fetchData() {
-      let request = new Request('https://cors-anywhere.herokuapp.com/https://api.fortnitetracker.com/v1/profile/xbox/Xxakprice95xX', {
+      console.log(Platform)
+      let request = new Request('https://cors-anywhere.herokuapp.com/https://api.fortnitetracker.com/v1/profile/' + this.Platform + '/' + Username,{
 	method: 'GET', 
 	headers: new Headers({
 		'TRN-Api-Key': '7152cd0a-ff37-4945-b2ac-ea8d1c4f3fe2'
