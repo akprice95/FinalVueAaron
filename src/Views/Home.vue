@@ -13,13 +13,10 @@
 </template>
 <script>
 
-
-
 // @ is an alias to /src
 
 export default {
   name: "home",
-  
     data: () => ({
       info : null,
       Username: "",
@@ -40,21 +37,6 @@ export default {
       ]
     }),
 methods:{
-<<<<<<< HEAD
-   fetchData() {
-      fetch(
-          'https://api.fortnitetracker.com/v1/profile/xbox/Xxakprice95xX',
-       
-       { headers:{
-    
-    Authorization: "Basic 7152cd0a-ff37-4945-b2ac-ea8d1c4f3fe2"
-  }})
-        .then(response => {
-          return response.json();
-        })
-        .then(data => console.log(data));
-    }
-=======
     fetchData() {
       let request = new Request('https://cors-anywhere.herokuapp.com/https://api.fortnitetracker.com/v1/profile/xbox/Xxakprice95xX', {
 	method: 'GET', 
@@ -67,7 +49,6 @@ methods:{
       return response.json()
     })
     .then(data => console.log(data))
->>>>>>> master
   }
 }
 }
