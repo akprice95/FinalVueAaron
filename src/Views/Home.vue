@@ -1,24 +1,15 @@
 <template>
-
   <v-container id="dropdown-example" grid-list-xl>
     <v-layout row wrap>
-    <v-toolbar>
-       <v-flex xs12 sm3>
-         <v-select
-         v-model="Platform"
-          :items="dropdown_font"
-          label="Platform"
-        ></v-select>
-       </v-flex>
-      <v-text-field
-      v-model.trim="Username"
-      label="Username"
-        single-line
-      ></v-text-field>
-  <button @click="fetchData">Get Data</button>
-    </v-toolbar>
-   </v-layout>
-        </v-container>
+      <v-toolbar>
+        <v-flex xs12 sm3>
+          <v-select v-model="Platform" :items="dropdown_font" label="Platform"></v-select>
+        </v-flex>
+        <v-text-field v-model.trim="Username" label="Username" single-line></v-text-field>
+        <button @click="fetchData">Get Data</button>
+      </v-toolbar>
+    </v-layout>
+  </v-container>
 </template>
 <script>
 
@@ -49,21 +40,20 @@ export default {
       ]
     }),
 methods:{
-   fetchData() {
-      fetch(
-          'https://api.fortnitetracker.com/v1/profile/xbox/Xxakprice95xX',
-       
-       { headers:{
-   
-    Authorization: "Basic 7152cd0a-ff37-4945-b2ac-ea8d1c4f3fe2"
-  }})
-        .then(response => {
-          return response.json();
-        })
-        .then(data => console.log(data));
-    }
+    fetchData() {
+      let request = new Request('https://cors-anywhere.herokuapp.com/https://api.fortnitetracker.com/v1/profile/xbox/Xxakprice95xX', {
+	method: 'GET', 
+	headers: new Headers({
+		'TRN-Api-Key': '7152cd0a-ff37-4945-b2ac-ea8d1c4f3fe2'
+	})
+})
+  fetch(request)
+  .then(response => {
+      return response.json()
+    })
+    .then(data => console.log(data))
   }
 }
-  
-
+}
+//https://cors-anywhere.herokuapp.com/
 </script>
