@@ -23,8 +23,6 @@
 </template>
 
 <script>
-import { films } from "../assets/films";
-import { starships } from "../assets/starships";
 export default {
   data() {
     return {
