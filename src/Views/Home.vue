@@ -79,27 +79,31 @@ methods:{
 
 <style>
 .heading{
-  font: 36px;
-  color: green;
+ text-align: center;
+ font-weight: bold;
+ text-transform: uppercase;
+ font-size: 13px;
+ color: #09eae2;
+ text-shadow: 2px 3px 6px #000000;
 }
 
 .score{
-  text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    text-shadow: 2px 8px 10px #000000;
+ text-align: center;
+   font-size: 28px;
+   font-weight: bold;
+   text-shadow: 2px 8px 10px #000000;
 }
 
 .v-card-animation{
-  -webkit-transition: width 2s, height 2s; /* For Safari 3.1 to 6.0 */
-  transition: width 2s, height 2s;
-  box-shadow: 10px 10px 12px #000000;
+ -webkit-transition: width 2s, height 2s; /* For Safari 3.1 to 6.0 */
+ transition: width 2s, height 2s;
+ box-shadow: 10px 10px 12px #000000;
 }
 
 .v-card-animation:hover{
-  background-color: #09eae229 !important;
-  width: 102%;
-  height: 102%;
+ background-color: #09eae229 !important;
+ width: 102%;
+ height: 102%;
 
 }
 </style>
