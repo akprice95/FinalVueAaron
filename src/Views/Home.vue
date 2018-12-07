@@ -79,12 +79,8 @@ methods:{
 
 <style>
 .heading{
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 13px;
-  color: #09eae2;
-  text-shadow: 2px 3px 6px #000000;
+  font: 36px;
+  color: green;
 }
 
 .score{
