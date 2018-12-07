@@ -8,37 +8,30 @@
 
       <!--nav-->
       
-      <v-list id="nav" dense>
-        <v-list-tile>
-          <v-list-tile-action>
-          </v-list-tile-action>
-          <v-list-tile-content>
-              <router-link to="/">Home</router-link>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile>
-          <v-list-tile-action>
-          </v-list-tile-action>
-          <v-list-tile-content>
-             <router-link to="/about">MyStats</router-link>
-          </v-list-tile-content>
-        </v-list-tile>
-          <v-list-tile >
-          <v-list-tile-action>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <router-link to="/Login">Login</router-link>
-          </v-list-tile-content>
-        </v-list-tile>
-          <v-list-tile>
-          <v-list-tile-action>
-          </v-list-tile-action>
-          <v-list-tile-content>
-             <router-link to="/layout">Contact Us</router-link>
-          </v-list-tile-content>
-        </v-list-tile>
+
+
+<v-list id="nav" dense>
+
+       <v-list-tile>
+         <router-link to="/">
+           <v-list-tile-content class="menu-link"><p>Home</p></v-list-tile-content>
+         </router-link>
+       </v-list-tile>
+
+       <v-list-tile>
+         <router-link to="/about">
+           <v-list-tile-content class="menu-link">My Stats</v-list-tile-content>
+         </router-link>
+       </v-list-tile>
+
+       <v-list-tile>
+         <router-link to="/layout">
+           <v-list-tile-content class="menu-link">Contact Us</v-list-tile-content>
+         </router-link>
+       </v-list-tile>
+
+     </v-list>
         
-      </v-list>
        
           <!--nav-->
 
@@ -93,8 +86,18 @@
   margin-top: 60px;
 
 }
-#nav {
- color: red;
+.menu-link{
+  width: 220px;
+  height: 25px;
+  padding: 5px 0px 5px 0px;
+  background-color: aliceblue;
+  
+
+  
+}
+.daNav {
+ color: red !important;
+ 
 }
 
 .daFooter{
