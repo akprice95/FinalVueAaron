@@ -31,11 +31,7 @@
        </v-list-tile>
 
      </v-list>
-        
-       
           <!--nav-->
-
-
     </v-navigation-drawer>
     
     <v-toolbar app fixed clipped-left>
