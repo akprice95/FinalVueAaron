@@ -88,7 +88,9 @@
     methods: {
       submit () {
         this.$v.$touch()
+        alert('We will be in touch with you shortly')
         this.$router.push("/stats")
+
 
       },
       clear () {

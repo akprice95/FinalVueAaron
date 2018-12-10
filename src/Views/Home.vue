@@ -7,19 +7,22 @@
           <v-select v-model="Platform" :items="items" label="Platform"></v-select>
         </v-flex>
         <v-text-field v-model.trim="Username" label="Username" single-line></v-text-field>
-        <button @click="fetchData">Get Data</button>
+        <button @click="fetchData">Get and store stats</button>
       </v-toolbar>
         <v-flex v-for="(Player,index)  in playerStats" :key="index" xs3>
           <v-card class="v-card-animation">
            <v-card-text>
             <p class="heading"> {{Player.key}}</p>
             <p class="score">{{Player.value}}</p>
+
             <p></p>
            </v-card-text>
           </v-card>
+
         </v-flex>
 
-
+        <button class="save-stats" @click="compareData" v-show="hasStats">Compare Stats
+       </button>
     </v-layout>
   </v-container>
 
@@ -34,6 +37,7 @@
 export default {
   name: "home",
     data: () => ({
+      hasStats: false,
       playerStats : null,
       info : null,
       Username: "",
@@ -55,6 +59,7 @@ export default {
     }),
 methods:{
     fetchData() {
+      this.hasStats = true;
       let APICall = ('https://cors-anywhere.herokuapp.com/https://api.fortnitetracker.com/v1/profile/' + this.Platform + '/' + this.Username)
       let request = new Request(APICall,{
 	method: 'GET',
@@ -68,9 +73,32 @@ methods:{
     })
     .then(response =>{
       this.playerStats = response.lifeTimeStats
-      console.log(this.playerStats)
+      this.$store.state.playerStatsArray = this.playerStats;
+      this.$store.state.storeUsername = this.Username;
+      console.log(this.$store.state.storeUsername);
     })
     .then(data => console.log(data) )
+
+  },
+  compareData(){
+  let APICall = ('https://cors-anywhere.herokuapp.com/https://api.fortnitetracker.com/v1/profile/' + this.Platform + '/' + this.Username)
+  let request = new Request(APICall,{
+  method: 'GET',
+  headers: new Headers({
+  'TRN-Api-Key': '7152cd0a-ff37-4945-b2ac-ea8d1c4f3fe2'
+  })
+  })
+  fetch(request)
+  .then(response => {
+  return response.json()
+  })
+  .then(response =>{
+  this.playerStats = response.lifeTimeStats;
+  this.$store.state.playerStatsArray2 = this.playerStats;
+  this.$store.state.storeUsername2 = this.Username;
+  console.log(this.$store.state.playerStatsArray2);
+  })
+  .then(data => console.log(data) )
   }
 }
 }

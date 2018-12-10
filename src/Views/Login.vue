@@ -55,7 +55,7 @@ export default {
   },
   methods: {
     onSubmit() {
-      console.log('Thanks for submitting!')
+      alert('Thanks for submitting!')
     }
   }
 }

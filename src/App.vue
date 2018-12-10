@@ -7,7 +7,7 @@
       app>
 
       <!--nav-->
-      
+
 
 
 <v-list id="nav" dense>
@@ -33,14 +33,14 @@
      </v-list>
           <!--nav-->
     </v-navigation-drawer>
-    
+
     <v-toolbar app fixed clipped-left>
       <v-toolbar-side-icon  @click.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>Fortnite stats</v-toolbar-title>
     </v-toolbar>
      <v-content>
       <v-container fluid>
-        <router-view></router-view> 
+        <router-view></router-view>
         <router-view name="stats"></router-view>
       </v-container>
     </v-content>
@@ -87,13 +87,13 @@
   height: 25px;
   padding: 5px 0px 5px 0px;
   background-color: aliceblue;
-  
 
-  
+
+
 }
 .daNav {
  color: red !important;
- 
+
 }
 
 .daFooter{

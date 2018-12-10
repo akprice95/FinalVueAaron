@@ -8,6 +8,14 @@ import Vuelidate from 'vuelidate';
 import '@mdi/font/css/materialdesignicons.css';
 import VueResouce from 'vue-resource';
 
+Vue.directive("aaron", {
+  bind(el){
+    el.style.color = "red";
+  }
+  
+});
+
+
 Vue.use(VueResouce);
 
 Vue.use(Vuetify, {
