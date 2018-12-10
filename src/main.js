@@ -12,7 +12,6 @@ Vue.directive("aaron", {
   bind(el){
     el.style.color = "red";
   }
-  
 });
 
 
