@@ -86,7 +86,6 @@
   width: 220px;
   height: 25px;
   padding: 5px 0px 5px 0px;
-  background-color: aliceblue;
 
 
 
