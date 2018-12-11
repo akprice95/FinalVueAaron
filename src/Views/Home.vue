@@ -8,23 +8,30 @@
         </v-flex>
         <v-text-field v-model.trim="Username" label="Username" single-line></v-text-field>
         <button @click="fetchData">Get and store stats</button>
+
+ 
       </v-toolbar>
         <v-flex v-for="(Player,index)  in playerStats" :key="index" xs3>
-          <v-card class="v-card-animation">
+          
+          <v-card class="v-card-animation" transition="slide-x-reverse-transition">
            <v-card-text>
             <p class="heading"> {{Player.key}}</p>
             <p class="score">{{Player.value}}</p>
-
             <p></p>
            </v-card-text>
           </v-card>
-
+           
         </v-flex>
 
+    
+<transition name="flip" mode="out-in">
         <button class="save-stats" @click="compareData" v-show="hasStats">Compare Stats
        </button>
+</transition>
+    
     </v-layout>
   </v-container>
+  
 
 
 </template>
@@ -133,5 +140,27 @@ methods:{
  width: 102%;
  height: 102%;
 
+}
+.flip-enter-active {
+  animation: flip-in 0.5s ease-out forwards
+}
+.flip-leave-active {
+  animation: flip-out 0.5s ease-out forwards
+}
+@keyframes flip-in {
+  from {
+    transform: rotateY(90deg)
+  }
+  to {
+    transform: rotateY(0deg)
+  }
+}
+@keyframes flip-out {
+  from {
+    transform: rotateY(0deg)
+  }
+  to {
+    transform: rotateY(90deg)
+  }
 }
 </style>
