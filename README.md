@@ -2,7 +2,7 @@
 
 ## Effectively use conditional logic and JavaScript array methods to render large lists.
 ```
-[Home.vue](https://github.com/akprice95/FinalVueAaron/blob/master/src/Views/Home.vue)
+[Home.vue](/FinalVueAaron/blob/master/src/Views/Home.vue)
 ```
 
 ### Encapsulate your code as VueJS single-file components.
