@@ -6,14 +6,12 @@
 
 
 ### Encapsulate your code as VueJS single-file components.
-```
-npm run serve
-```
+
+[main.js](https://github.com/akprice95/FinalVueAaron/blob/master/src/main.js) & [About.vue](https://github.com/akprice95/FinalVueAaron/blob/master/src/Views/About.vue)
 
 ### Work with the Vue-CLI to create and manage your project within a real development toolset.
-```
-npm run build
-```
+
+
 
 ### Properly use Git for your source version control with an established record of at least 4 days of commits each week from October 15th through December 6th.
 ```
